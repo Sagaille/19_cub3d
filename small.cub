@@ -1,0 +1,21 @@
+
+R 800 1000
+
+F   Textures/Sand.xpm 
+NO  Textures/redbrick.xpm
+SO  Textures/wood.xpm
+WE  Textures/mossy.xpm    
+ 
+EA      Textures/colorstone.xpm  
+S   Textures/barrel.xpm
+C   Textures/sky.xpm    
+
+   
+   d
+
+    
+ 111111
+ 112221
+ 12N221
+ 112221
+ 111111

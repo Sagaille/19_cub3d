@@ -1,0 +1,33 @@
+int ft_cub_parsing(t_mlx *glo, char *argv[])
+{
+int i;
+int fd;
+int ret;
+int x;
+char buffer[100];
+char *temp;
+
+x = 0;
+i = 0;
+fd = open(argv[1], O_RDONLY);
+if (fd < 1)
+{
+    ft_putstr_fd(" open .cub error \n", 1);
+    exit(1);
+}
+if (ret = read(fd, buffer, 100))
+glo->infos = ft_strdup(buffer);
+while (ret = read(fd, buffer, 100))
+{
+buffer[ret] = '\0';
+temp = ft_strdup(glo->infos);
+free(glo->infos);
+glo->infos = ft_strjoin(temp, buffer);
+free(temp);
+}
+if (close(fd) == -1)
+ft_error_msg("ERROR\ncant close file");
+printf("infos = %s\n", glo->infos);
+free(glo->infos);
+exit(1);
+while (buffer[i])
